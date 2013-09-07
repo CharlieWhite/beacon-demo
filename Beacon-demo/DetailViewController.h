@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate, CBPeripheralManagerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 

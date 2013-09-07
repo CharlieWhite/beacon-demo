@@ -22,6 +22,9 @@
 		CB9FEDE517B1EE8E002A3A7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FEDC417B1EE8D002A3A7B /* UIKit.framework */; };
 		CB9FEDED17B1EE8E002A3A7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB9FEDEB17B1EE8E002A3A7B /* InfoPlist.strings */; };
 		CB9FEDEF17B1EE8E002A3A7B /* Beacon_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FEDEE17B1EE8E002A3A7B /* Beacon_demoTests.m */; };
+		CB9FEDF917B1EF14002A3A7B /* kft-502_1z.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9FEDF817B1EF14002A3A7B /* kft-502_1z.jpg */; };
+		CB9FEDFD17B2021F002A3A7B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FEDFC17B2021F002A3A7B /* CoreLocation.framework */; };
+		CB9FEDFF17B20293002A3A7B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FEDFE17B20293002A3A7B /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		CB9FEDEA17B1EE8E002A3A7B /* Beacon-demoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beacon-demoTests-Info.plist"; sourceTree = "<group>"; };
 		CB9FEDEC17B1EE8E002A3A7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB9FEDEE17B1EE8E002A3A7B /* Beacon_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Beacon_demoTests.m; sourceTree = "<group>"; };
+		CB9FEDF817B1EF14002A3A7B /* kft-502_1z.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kft-502_1z.jpg"; sourceTree = "<group>"; };
+		CB9FEDFC17B2021F002A3A7B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CB9FEDFE17B20293002A3A7B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9FEDFF17B20293002A3A7B /* CoreBluetooth.framework in Frameworks */,
+				CB9FEDFD17B2021F002A3A7B /* CoreLocation.framework in Frameworks */,
 				CB9FEDC317B1EE8D002A3A7B /* CoreGraphics.framework in Frameworks */,
 				CB9FEDC517B1EE8D002A3A7B /* UIKit.framework in Frameworks */,
 				CB9FEDC117B1EE8D002A3A7B /* Foundation.framework in Frameworks */,
@@ -104,6 +112,8 @@
 		CB9FEDBF17B1EE8D002A3A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB9FEDFE17B20293002A3A7B /* CoreBluetooth.framework */,
+				CB9FEDFC17B2021F002A3A7B /* CoreLocation.framework */,
 				CB9FEDC017B1EE8D002A3A7B /* Foundation.framework */,
 				CB9FEDC217B1EE8D002A3A7B /* CoreGraphics.framework */,
 				CB9FEDC417B1EE8D002A3A7B /* UIKit.framework */,
@@ -122,6 +132,7 @@
 				CB9FEDD617B1EE8D002A3A7B /* MasterViewController.m */,
 				CB9FEDD817B1EE8D002A3A7B /* DetailViewController.h */,
 				CB9FEDD917B1EE8D002A3A7B /* DetailViewController.m */,
+				CB9FEDF817B1EF14002A3A7B /* kft-502_1z.jpg */,
 				CB9FEDDB17B1EE8D002A3A7B /* Images.xcassets */,
 				CB9FEDC717B1EE8D002A3A7B /* Supporting Files */,
 			);
@@ -233,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9FEDF917B1EF14002A3A7B /* kft-502_1z.jpg in Resources */,
 				CB9FEDDC17B1EE8D002A3A7B /* Images.xcassets in Resources */,
 				CB9FEDCB17B1EE8D002A3A7B /* InfoPlist.strings in Resources */,
 				CB9FEDD417B1EE8D002A3A7B /* Main.storyboard in Resources */,

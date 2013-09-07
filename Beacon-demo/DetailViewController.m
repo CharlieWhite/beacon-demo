@@ -8,12 +8,15 @@
 
 #import "DetailViewController.h"
 
+
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController {
+    CBPeripheralManager *_peripheralManager;
+}
 
 #pragma mark - Managing the detail item
 
@@ -40,11 +43,32 @@
     }
 }
 
+- (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
+{
+    
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:((unsigned short)1)  minor:((unsigned short)1) identifier:@"com.apple.AirLocate"];
+    NSDictionary *peripheralData = nil;
+    peripheralData = [region peripheralDataWithMeasuredPower:@-59];
+    [_peripheralManager startAdvertising:peripheralData];
+    NSLog(@"Advertising: %d", _peripheralManager.isAdvertising);
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+    
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:((unsigned short)1)  minor:((unsigned short)1) identifier:@"com.apple.AirLocate"];
+    NSDictionary *peripheralData = nil;
+    peripheralData = [region peripheralDataWithMeasuredPower:@-59];
+    [_peripheralManager startAdvertising:peripheralData];
+
+    NSLog(@"Advertising: %d", _peripheralManager.isAdvertising);
 }
 
 - (void)didReceiveMemoryWarning
